@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức công nghệ</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/2097/2097276.png" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header {
+            background-image: url('images/banner\ poco.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .navigation-header {
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navtigation-item {
+            padding: 0 30px;
+        }
+        .contact {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .container-footer {
+            background-color: #000;
+            padding-top: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- BANNER -->
+    <header class="row header"></header>
+<nav class="navbar navbar-expand-lg bg-dark navigation-header" data-bs-theme="dark">
+    <div class="container-fluid">
+        <!-- Nút thu gọn (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu căn giữa -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="cellhud.html">Trang chủ</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="sanpham.html">Sản phẩm</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="tintuc.html">Tin tức</a> 
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- CONTAINER CONTACT FORM -->
+    <div class="container contact">
+        <div class="row">
+            <div class="col-lg-6">
+				<div class="row">
+					<div class="col">
+					  <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+					</div>
+					<div class="col">
+					  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+					</div>
+				  </div>
+                <div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label"> EMAIL</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+				  </div>
+				  <div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label">NHẬP Ý KIẾN</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+						<label class="form-check-label" for="flexCheckChecked">
+						tôi đồng ý với tất cả điều khoản của CellHUD
+						</label>
+					  </div>
+					  <button type="button" id="submitBtn" class="btn btn-danger" onclick="sendContactForm()">GỬI ĐI</button>
+				  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2668.5504457249663!2d108.26092660845062!3d12.914582116077684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316e1d97b47ecb53%3A0xf21ceb3a4c4c84bc!2zQnXDtG4gSOG7kyBUb3duIFJvdW5kYWJvdXQ!5e1!3m2!1sen!2s!4v1720607576597!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container-fluid container-footer">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-footer">
+                        <h4><i class="bi bi-geo-alt"></i> VỊ TRÍ</h4>
+                        <h5>ĐĂK LĂK</h5>
+                        <p>THỊ XÃ BUÔN HỒ ĐĂK LĂK</p>
+                        <p>BUÔN MA THUỘT ĐĂK LĂK</p>
+                        <p>THỊ TRẤN QUẢNG PHÚ ĐĂK LĂK</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-footer">
+                        <h4><i class="bi bi-question-circle"></i> CÁC ĐIỀU KHOẢN</h4>
+                        <ul>
+                            <li>Chính sách bảo hành</li>
+                            <li>Chính sách vận chuyển</li>
+                            <li>Chính sách đổi trả hàng</li>
+                            <li>Chính sách bảo mật thông tin</li>
+                            <li>Hướng dẫn thanh toán</li>
+                            <li>Hướng dẫn mua hàng Online</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-footer">
+                        <h4><i class="bi bi-info-circle"></i> VỀ CHÚNG TÔI</h4>
+                        <p>SẢN PHẨM</p>
+                        <p>DỊCH VỤ</p>
+                        <p>CHÍNH SÁCH</p>
+                        <p>TIN TỨC</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="content-footer">
+                        <h4><i class="bi bi-envelope-exclamation"></i> TRANG WEB GẶP SỰ CỐ</h4>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput2" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea2" class="form-label">Nhập ý kiến</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                            <!-- Thêm onclick vào đây để xử lý khi người dùng nhấn vào nút -->
+                            <button type="button" id="sendFeedbackBtn" class="btn btn-danger" onclick="sendFeedback()">Gửi đi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript để kiểm tra email và xử lý đã điền đủ thông tin chưa -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function sendContactForm() {
+    let firstNameInput = document.querySelector('input[aria-label="First name"]');
+    let lastNameInput = document.querySelector('input[aria-label="Last name"]');
+    let emailInput = document.getElementById('exampleFormControlInput1');
+    let opinionInput = document.getElementById('exampleFormControlTextarea1');
+    let agreeCheckbox = document.getElementById('flexCheckChecked');
+
+    let firstName = firstNameInput.value.trim();
+    let lastName = lastNameInput.value.trim();
+    let email = emailInput.value.trim();
+    let opinion = opinionInput.value.trim();
+    let agreeChecked = agreeCheckbox.checked;
+
+    // Biểu thức chính quy để kiểm tra định dạng email
+    let emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+
+    if (firstName === '' || lastName === '' || email === '' || opinion === '' || !agreeChecked) {
+        alert('Vui lòng điền đầy đủ thông tin và đồng ý với các điều khoản.');
+        return;
+    }
+
+    if (!emailRegex.test(email)) {
+        alert('Lỗi ! Vui lòng nhập địa chỉ email Gmail hợp lệ.');
+        return;
+    }
+
+    // Xử lý gửi form liên hệ (ví dụ: gửi dữ liệu lên server, hoặc chỉ hiển thị thông báo)
+    alert('Ý kiến của bạn đã được gửi thành công!');
+
+    // Reset các trường input sau khi gửi thành công
+    firstNameInput.value = '';
+    lastNameInput.value = '';
+    emailInput.value = '';
+    opinionInput.value = '';
+    agreeCheckbox.checked = false;
+}
+
+    </script>
+</body>
+</html>

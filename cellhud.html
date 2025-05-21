@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cellhud</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/2097/2097276.png" type="image/x-icon">
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            background-image: url('images/banner\ poco.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .navigation-header {
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+
+        .navtigation-item {
+            padding: 0 30px;
+        }
+
+        .left, .right {
+            height: 500px;
+        }
+
+        .slide {
+            background-size: 100% 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .sp-title {
+            background-color: #ff6347;
+            color: white;
+            padding: 1%;
+            width: 100%;
+            font-size: 1.25rem;
+            margin: 1% 0;
+        }
+
+        .content-product {
+           
+            padding: 20px 0;
+            margin-bottom: 5%;
+        }
+
+        .card-footer, .card-body {
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-left: 8%;
+            padding-top: 10px;
+        }
+
+        .icon-footer {
+            font-size: 50px;
+        }
+
+       
+
+        .card-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            border: 2px solid #ff4d4d ;
+        }
+        .container-footer{
+	     background-color: #000;
+         padding-top: 10px;
+         color: white;
+
+ }
+
+.bi-star-fill {
+    color: #e6e200 ; 
+}
+
+.bi-star {
+    color: #000; 
+}
+    </style>
+</head>
+<body>
+    <!-- BANNER -->
+<header class="row header">
+</header>
+<nav class="navbar navbar-expand-lg bg-dark navigation-header" data-bs-theme="dark">
+    <div class="container-fluid">
+        <!-- Nút thu gọn (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu căn giữa -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="cellhud.html">Trang chủ</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="sanpham.html">Sản phẩm</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="tintuc.html">Tin tức</a> 
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="content content-product">
+        <div class="row title title-heading">
+            <div class="sp-title">
+                SẢN PHẨM NỔI BẬT
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4 products">
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/iphone 15.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại iPhone 15 Pro Max Chính hãng VN/A</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">25,450,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                            <div class="card-footer card-icon">
+                                <div>
+                                   <i id="sp-7-star-1" pos="1" sp="7" onclick="danhgiasanpham(this)" class="bi bi-star-fill"></i>
+                                    <i id="sp-7-star-2" pos="2" sp="7" onclick="danhgiasanpham(this)" class="bi bi-star"></i>
+                                    <i id="sp-7-star-3" pos="3" sp="7" onclick="danhgiasanpham(this)" class="bi bi-star"></i>
+                                    <i id="sp-7-star-4" pos="4" sp="7" onclick="danhgiasanpham(this)" class="bi bi-star"></i>
+                                    <i id="sp-7-star-5" pos="5" sp="7" onclick="danhgiasanpham(this)" class="bi bi-star"></i>
+                                </div>
+                            </div> 
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/xiaomi 14.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại Xiaomi 14 Cũ (99% giá siêu rẻ)</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">10,950,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-6-star-1" pos="1" sp="6" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-6-star-2" pos="2" sp="6" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-6-star-3" pos="3" sp="6" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-6-star-4" pos="4" sp="6" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-6-star-5" pos="5" sp="6" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/ss s23.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại Samsung Galaxy S24 Ultra Chính hãng AI (Snapdragon 8 Gen 3)</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">22,250,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-5-star-1" pos="1" sp="5" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-5-star-2" pos="2" sp="5" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-5-star-3" pos="3" sp="5" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-5-star-4" pos="4" sp="5" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-5-star-5" pos="5" sp="5" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/oppo.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại OPPO Find X7 Ultra 5G (Snapdragon 8 Gen 3)</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">20,999,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-4-star-1" pos="1" sp="4" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-4-star-2" pos="2" sp="4" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-4-star-3" pos="3" sp="4" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-4-star-4" pos="4" sp="4" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-4-star-5" pos="5" sp="4" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row title">
+            <div class="sp-title">
+                SẢN PHẨM BÁN CHẠY
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4 products">
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/ippad.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">iPad Pro M4 11 inch Wifi 1TB</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">45,590,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-8-star-1" pos="1" sp="8" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-8-star-2" pos="2" sp="8" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-8-star-3" pos="3" sp="8" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-8-star-4" pos="4" sp="8" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-8-star-5" pos="5" sp="8" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/vivo x100.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại Vivo X100 Pro 5G (Dimensity 9300)</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">17,000,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-1-star-1" pos="1" sp="1" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-1-star-2" pos="2" sp="1" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-1-star-3" pos="3" sp="1" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-1-star-4" pos="4" sp="1" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-1-star-5" pos="5" sp="1" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/tecno-pova-5-x-free-fire-vang.jpg.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại Tecno POVA 5 Chính hãng (POVA 5 X Free Fire) </h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">3.450.000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                           <i id="sp-3-star-1" pos="1" sp="3" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-3-star-2" pos="2" sp="3" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-3-star-3" pos="3" sp="3" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-3-star-4" pos="4" sp="3" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-3-star-5" pos="5" sp="3" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-product">
+                    <img src="images/rog-phone-6-trang.jpg.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Điện thoại Asus ROG Phone 6 (Snapdragon 8+ Gen 1, pin 6000mAh)</h5>
+                        <p class="card-text" style="color:red; font-size: 1.2rem; font-weight:bold;">12,000,000 VND</p>
+                    </div>
+                    <div class="card-footer card-icon">
+                        <div>
+                            <i id="sp-2-star-1" pos="1" sp="2" onclick="danhgiasanpham(this)"  class="bi bi-star-fill"></i>
+                            <i id="sp-2-star-2" pos="2" sp="2" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-2-star-3" pos="3" sp="2" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-2-star-4" pos="4" sp="2" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                            <i id="sp-2-star-5" pos="5" sp="2" onclick="danhgiasanpham(this)"  class="bi bi-star"></i>
+                        </div>
+                        <button type="button" class="btn btn-warning">Mua hàng
+                            <i class="bi bi-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-rectangle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="productImg" src="" class="img-fluid" alt="Product Image">
+                        </div>
+                        <div class="col-md-6">
+                            <p id="productName"></p>
+                            <p id="productPrice" style="color: red;"></p>
+                            <div class="mb-3">
+                                <label for="productQuantity" class="form-label">Số Lượng</label>
+                                <input type="number" class="form-control" id="productQuantity" value="1" min="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addToCart()">Mua Ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+</div>
+<footer>
+    <div class="container-fluid container-footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-geo-alt"></i> VỊ TRÍ</h4>
+                    <h5>ĐĂK LĂK</h5>
+                    <p>THỊ XÃ BUÔN HỒ ĐĂK LĂK</p>
+                    <p>BUÔN MA THUỘT ĐĂK LĂK</p>
+                    <p>THỊ TRẤN QUẢNG PHÚ ĐĂK LĂK</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-question-circle"></i> CÁC ĐIỀU KHOẢN</h4>
+                    <ul>
+                        <li>Chính sách bảo hành</li>
+                        <li>Chính sách vận chuyển</li>
+                        <li>Chính sách đổi trả hàng</li>
+                        <li>Chính sách bảo mật thông tin</li>
+                        <li>Hướng dẫn thanh toán</li>
+                        <li>Hướng dẫn mua hàng Online</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-info-circle"></i> VỀ CHÚNG TÔI</h4>
+                    <p>SẢN PHẨM</p>
+                    <p>DỊCH VỤ</p>
+                    <p>CHÍNH SÁCH</p>
+                    <p>TIN TỨC</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-envelope-exclamation"></i> TRANG WEB GẶP SỰ CỐ</h4>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Nhập ý kiến</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <button type="button" class="btn btn-danger">Gửi đi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- CONTAINER PRODUCT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JAVASCRIPT -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+            var buyButtons = document.querySelectorAll('.btn-warning');
+            buyButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var card = button.closest('.card-product');
+                    var productName = card.querySelector('.card-title').textContent.trim();
+                    var modalProductPrice = card.querySelector('.card-text').textContent.trim();
+                    var modalProductImage = card.querySelector('.card-img-top').getAttribute('src');
+                    
+                    // Hiển thị thông tin sản phẩm trong modal
+                    var modalElement = document.getElementById('productModal');
+                    var modal = new bootstrap.Modal(modalElement);
+                    var modalTitle = document.getElementById('exampleModalLabel');
+                    var modalImg = document.getElementById('productImg');
+                    var modalName = document.getElementById('productName');
+                    var modalPrice = document.getElementById('productPrice');
+                    var modalQuantity = document.getElementById('productQuantity');
+
+                    modalTitle.textContent = productName;
+                    modalImg.src = modalProductImage;
+                    modalName.textContent = productName;
+                    modalPrice.textContent = modalProductPrice;
+                    modalQuantity.value = 1;  // Đặt giá trị mặc định cho số lượng sản phẩm là 1
+
+                    // Hiển thị modal
+                    modal.show();
+                });
+            });
+        });
+
+        function addToCart() {
+            var productName = document.getElementById('productName').textContent;
+            var productPrice = document.getElementById('productPrice').textContent;
+            var productQuantity = document.getElementById('productQuantity').value;
+
+            // Xử lý thêm sản phẩm vào giỏ hàng
+            alert('Chúc mừng bạn đã mua ' + productName + ' thành công với số lượng ' + productQuantity);
+
+            // Đóng modal khi thêm vào giỏ hàng thành công
+            var modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+            modal.hide();
+        }
+    // hàm xử lý đánh giá sao
+    function danhgiasanpham(Obj) {
+        var pos = parseInt(Obj.getAttribute("pos"));  // Lấy vị trí của sao
+        var sp = parseInt(Obj.getAttribute("sp"));    // Lấy sản phẩm tương ứng
+        var starIdPrefix = "sp-" + sp + "-star-";     // Tiền tố ID của ngôi sao
+
+        // Kiểm tra nếu đang là ngôi sao rỗng thì chuyển thành ngôi sao đầy và ngược lại
+        if (Obj.classList.contains("bi-star")) {
+            for (var i = 1; i <= pos; i++) {
+                document.getElementById(starIdPrefix + i).classList.remove("bi-star");
+                document.getElementById(starIdPrefix + i).classList.add("bi-star-fill");
+            }
+        } else {
+            for (var i = pos; i <= 5; i++) {
+                document.getElementById(starIdPrefix + i).classList.remove("bi-star-fill");
+                document.getElementById(starIdPrefix + i).classList.add("bi-star");
+            }
+        }
+    }
+</script>
+
+
+    
+</body>
+</html>

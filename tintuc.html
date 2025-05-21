@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức công nghệ</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/2097/2097276.png" type="image/x-icon">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header {
+            background-image: url('images/banner\ poco.webp');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .navigation-header {
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .top-head {
+            background: yellow;
+            height: 20px;
+        }
+        .navtigation-item {
+            padding: 0 30px;
+        }
+        .right {
+            height: 500px;
+        }
+        .dmsp, .foot {
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            margin: 1%;
+            padding: 1%;
+            width: 100%;
+            font-size: 1.25rem;
+        }
+        .slide {
+            background-size: 100% 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .sp-title {
+            background: #0d6efd;
+            color: white;
+            padding: 1%;
+            width: 100%;
+            font-size: 1.25rem;
+            margin: 1% 0;
+        }
+        .title-heading {
+            margin-top: 100px;
+        }
+      
+        .content-product {
+            padding: 20px 0;
+        }
+        .card-footer, .card-body {
+            text-align: center;
+        }
+        .contact-info {
+            margin-left: 8%;
+        }
+        .icon-footer {
+            font-size: 50px;
+        }
+        .card-icon i:hover {
+            color: #ff4d4d;
+            cursor: pointer;
+        }
+        .card-product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .container-news {
+            margin: 30px 0;
+        }
+        .news {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .news .img-news,
+        .news .info-news {
+            width: 100%;
+        }
+        .news .img-news img {
+            max-width: 100%;
+            height: auto;
+        }
+        .info-news {
+            margin-top: 10px;
+        }
+        .info-news p {
+            font-weight: bold;
+        }
+        .heading-news {
+            margin: 10px 0;
+            color: #ff6347;
+        }
+        .container-news{
+            margin-bottom: 60px;
+        }
+        .boder-title-news {
+            height: 3px;
+            background-color: #e9967a;
+        }
+
+        .container-footer{
+	     background-color: #000;
+         padding-top: 10px;
+         color: white;
+
+ }
+ .news {
+    position: relative;
+    overflow: hidden;
+}
+
+.news img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.news:hover img {
+    transform: scale(1.1); /* Phóng to ảnh lên 110% khi hover */
+}
+
+ 
+        
+        @media (min-width: 768px) {
+            .news {
+                flex-direction: row;
+                text-align: left;
+            }
+            .news .img-news {
+                flex: 1;
+                margin-right: 20px;
+            }
+            .news .info-news {
+                flex: 2;
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- BANNER -->
+<header class="row header"></header>
+<nav class="navbar navbar-expand-lg bg-dark navigation-header" data-bs-theme="dark">
+    <div class="container-fluid">
+        <!-- Nút thu gọn (mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu căn giữa -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="cellhud.html">Trang chủ</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="gioithieu.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="sanpham.html">Sản phẩm</a>
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="tintuc.html">Tin tức</a> 
+                </li>
+                <li class="nav-item navtigation-item">
+                    <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- CONTAINER NEWS -->
+<div class="container">
+    <div class="row container-news">
+        <div class="col-lg-12">
+            <div class="heading-news">
+                <h4>TIN TỨC CÔNG NGHỆ</h4>
+                <hr class="boder-title-news">
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/xiaomi-15-se-so-huu-khang-nuoc-xin-hon-iphone-15-va-galaxy-s25.jpg.webp" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                        Xiaomi 15 sẽ sở hữu kháng nước xịn hơn iPhone 15 và Galaxy S25.
+                        Dự kiến Xiaomi 15 sẽ ra mắt vào tháng 10 năm nay. Với thời gian ngày càng gần, thông tin rò rỉ cũng ngày càng nhiều. Theo trang Gizmochina, thông tin mới nhất là về khả năng chống bụi, nước của dòng điện thoại này. Xiaomi 15 và Xiaomi 15 Pro đều được cho.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/realme gt6.webp" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                        Đây là giá bán Realme GT6 (China), sắp ra mắt trong tháng này
+                        Realme sẽ phát hành Realme GT6 vào ngày 9 tháng 7 tới đây. Trước sự kiện ra mắt, giá của mẫu smartphone này mới được tiết lộ trước trên nền tảng thương mại điện tử bắt đầu từ 3.199 NDT, khoảng 11,2 triệu VNĐ. Rò rỉ về giá bán Realme GT6 (China) Một
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/redmi-k70-ultra-se-co-man-hinh-cao-cap-nhat-tu-truoc-toi-nay.jpg.webp" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                        Redmi K70 Ultra sẽ có màn hình cao cấp nhất từ trước tới nay.
+                        Theo trang Gizmochina, trong bài viết, Redmi K70 Ultra sẽ sử dụng màn hình của Samsung. Và hệ thống cửa hàng này khẳng định rằng chiếc điện thoại thông minh mới của họ sẽ có màn hình cao cấp nhất từ trước đến nay.
+                    </p>
+                </div>
+            </div>
+        </div>
+		<div class="heading-news">
+			<h4>SO SÁNH CÔNG NGHỆ</h4>
+			<hr class="boder-title-news">
+		</div>
+		<div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/xiaomi vs redmagic" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                       
+                     So sánh Nubia Red Magic 9S Pro vs Xiaomi 14 Ultra: Ai toàn diện hơn?
+                     Cùng so sánh Nubia Red Magic 9S Pro vs Xiaomi 14 Ultra , hai mẫu điện thoại cao cấp bậc nhất nhưng thuộc về hai "thế giới" khác hẳn nhau. Giữa cá tính, sự mạnh mẽ cùng vẻ ngoài hào nhoáng, tính năng thực dụng thì bạn sẽ chọn cho mình chiếc điện thoại nào?
+                    </p>
+                </div>
+            </div>
+        </div>
+		<div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/redmagic vs vivo x100.webp" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                       
+                     So sánh Nubia Red Magic 9S Pro vs Vivo X100 Ultra: Mạnh, pin trâu hơn
+                    Nubia Red Magic 9S Pro mới ra mắt và Vivo X100 Ultra là mẫu điện thoại khiến người dùng cân nhắc lựa chọn. So sánh Nubia Red Magic 9S Pro vs Vivo X100 Ultra sẽ giúp bạn nắm rõ hơn về hai mẫu điện thoại này. Mục lục So sánh Nubia Red Magic 9S Pro vs
+                    </p>
+                </div>
+            </div>
+        </div>
+		<div class="col-lg-12">
+            <div class="news">
+                <div class="img-news">
+                    <img src="images/tintuc/rog phone vs redmagic.webp" alt="">
+                </div>
+                <div class="info-news">
+                    <p>
+                       
+                   So sánh Nubia Red Magic 9S Pro vs ROG Phone 8: Thiết kế là mấu chốt
+                   Cùng so sánh Nubia Red Magic 9S Pro vs ROG Phone 8 , hai mẫu gaming phone hàng đầu thế giới thời điểm hiện tại sẽ có màn đọ không khoan nhượng. Đại diện của thương hiệu nào sẽ vượt trội hơn đối thủ? Câu trả lời nằm trong bài viết so sánh Nubia R
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer>
+    <div class="container-fluid container-footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-geo-alt"></i> VỊ TRÍ</h4>
+                    <h5>ĐĂK LĂK</h5>
+                    <p>THỊ XÃ BUÔN HỒ ĐĂK LĂK</p>
+                    <p>BUÔN MA THUỘT ĐĂK LĂK</p>
+                    <p>THỊ TRẤN QUẢNG PHÚ ĐĂK LĂK</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-question-circle"></i> CÁC ĐIỀU KHOẢN</h4>
+                    <ul>
+                        <li>Chính sách bảo hành</li>
+                        <li>Chính sách vận chuyển</li>
+                        <li>Chính sách đổi trả hàng</li>
+                        <li>Chính sách bảo mật thông tin</li>
+                        <li>Hướng dẫn thanh toán</li>
+                        <li>Hướng dẫn mua hàng Online</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-info-circle"></i> VỀ CHÚNG TÔI</h4>
+                    <p>SẢN PHẨM</p>
+                    <p>DỊCH VỤ</p>
+                    <p>CHÍNH SÁCH</p>
+                    <p>TIN TỨC</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="content-footer">
+                    <h4><i class="bi bi-envelope-exclamation"></i> TRANG WEB GẶP SỰ CỐ</h4>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Nhập ý kiến</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <button type="button" class="btn btn-danger">Gửi đi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
